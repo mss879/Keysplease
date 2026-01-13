@@ -7,20 +7,20 @@ import { AnimeNavBar } from "@/components/ui/anime-navbar"
 const items = [
   {
     name: "Home",
-    url: "#",
-    href: "#",
+    url: "/",
+    href: "/",
     icon: Home,
   },
   {
     name: "Buy",
-    url: "#",
-    href: "#",
+    url: "/buy",
+    href: "/buy",
     icon: ShoppingBag,
   },
   {
     name: "Rent",
-    url: "#",
-    href: "#",
+    url: "/rent",
+    href: "/rent",
     icon: Key,
   },
   {

@@ -78,12 +78,16 @@ export function FeaturesSection() {
                             onValueChange={(val) => val && setActiveItem(val)}
                         >
                             {features.map((feature) => (
-                                <AccordionItem key={feature.id} value={feature.id} className="border-b-0 mb-2 px-4 border-l-2 border-transparent data-[state=open]:border-blue-600 data-[state=open]:bg-slate-50 transition-all rounded-r-lg">
-                                    <AccordionTrigger className="hover:no-underline py-4">
+                                <AccordionItem
+                                    key={feature.id}
+                                    value={feature.id}
+                                    className="border-b-0 mb-3 px-6 py-2 border-l-4 border-transparent data-[state=open]:border-[#c89e36] data-[state=open]:bg-[#c89e36]/10 data-[state=open]:shadow-sm transition-all rounded-r-xl hover:bg-slate-50/80"
+                                >
+                                    <AccordionTrigger className="hover:no-underline py-4 text-[#1a2333] data-[state=open]:text-[#c89e36] transition-colors">
                                         <span className="text-lg font-semibold">{feature.title}</span>
                                     </AccordionTrigger>
                                     <AccordionContent>
-                                        <p className="text-sm text-muted-foreground pb-4 leading-relaxed">
+                                        <p className="text-sm text-slate-600 pb-4 leading-relaxed font-medium">
                                             {feature.description}
                                         </p>
                                     </AccordionContent>
