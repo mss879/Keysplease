@@ -25,8 +25,8 @@ const items = [
   },
   {
     name: "Contact",
-    url: "#",
-    href: "#",
+    url: "/contact",
+    href: "/contact",
     icon: Phone,
   },
 ]

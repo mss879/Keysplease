@@ -93,9 +93,9 @@ export function WhyUsSection() {
                               <feature.icon className="w-5 h-5 text-black" strokeWidth={1.5} />
                             </div>
                             <div className="space-y-1">
-                              <h5 className="font-semibold text-base text-black leading-none">
+                              <h3 className="font-semibold text-base text-black leading-none">
                                 {feature.title}
-                              </h5>
+                              </h3>
                               <p className="text-xs text-gray-500 leading-relaxed line-clamp-3">
                                 {feature.description}
                               </p>

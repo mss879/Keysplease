@@ -96,6 +96,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home" }: NavBar
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="bg-black/80 backdrop-blur-md p-3 rounded-full text-amber-400 border border-amber-500/20 shadow-lg relative z-10"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

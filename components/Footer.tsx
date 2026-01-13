@@ -28,10 +28,10 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-    { icon: Facebook, href: "#" },
-    { icon: Instagram, href: "#" },
-    { icon: Twitter, href: "#" },
-    { icon: Linkedin, href: "#" },
+    { icon: Facebook, href: "#", name: "Facebook" },
+    { icon: Instagram, href: "#", name: "Instagram" },
+    { icon: Twitter, href: "#", name: "Twitter" },
+    { icon: Linkedin, href: "#", name: "LinkedIn" },
 ];
 
 export function Footer() {
@@ -49,7 +49,7 @@ export function Footer() {
 
                     {/* Brand Column */}
                     <div className="lg:col-span-5 space-y-8">
-                        <Link href="/" className="inline-block group">
+                        <Link href="/" className="inline-block group" aria-label="Keys Please Home">
                             <div className="bg-white py-3 px-6 rounded-2xl w-fit shadow-lg transition-transform duration-300 group-hover:scale-105">
                                 <Image
                                     src="/keysplease-logo.png"
@@ -69,7 +69,7 @@ export function Footer() {
                     <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-10">
                         {footerLinks.map((section, idx) => (
                             <div key={idx}>
-                                <h4 className="font-bold text-lg mb-6 text-white tracking-wide">{section.title}</h4>
+                                <h3 className="font-bold text-lg mb-6 text-white tracking-wide">{section.title}</h3>
                                 <ul className="space-y-4">
                                     {section.links.map((link, linkIdx) => (
                                         <li key={linkIdx}>
@@ -88,12 +88,13 @@ export function Footer() {
 
                         {/* Social Column */}
                         <div>
-                            <h4 className="font-bold text-lg mb-6 text-white tracking-wide">Connect</h4>
+                            <h3 className="font-bold text-lg mb-6 text-white tracking-wide">Connect</h3>
                             <div className="flex gap-3">
                                 {socialLinks.map((social, idx) => (
                                     <a
                                         key={idx}
                                         href={social.href}
+                                        aria-label={social.name}
                                         className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#c89e36] hover:border-[#c89e36] hover:text-white transition-all duration-300 text-slate-300 group"
                                     >
                                         <social.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
